@@ -1,0 +1,58 @@
+{% extends './base.html' %}
+{% load static %}
+{% block content %}
+
+<!--About section-->
+{% for a in about %}
+<div id="about">
+
+    <h2 id="aboutitle">About India</h2>
+    <span id="line"></span>
+    <!--1st-->
+    
+    <div class="column">
+
+        <div class="text">
+        <h2>What is India ?</h2>
+        <p>{{a.desc1}} </p>
+        </div>
+        <img src="{{ a.img1.url }}" alt="Indian-flag">
+    </div>
+     <!--2nd-->
+    <div class="column">
+
+        <div class="text">
+            <h2>What India Offers for Tourists ?</h2>
+            <p>{{ a.desc2 }} </p>
+        </div>
+            <img src="{{a.img2.url}}" alt="place">
+    </div>
+   
+</div>
+
+<!--Counter Section-->
+<section id="counters">
+    <div class="container">
+    <div class="box">
+        <i class="fas fa-users"></i>
+        <div class="counter" data-target="{{a.population}}">0</div>
+        <h2>Population</h2>
+    </div>
+
+    <div class="box">
+        <i class="fas fa-city"></i>
+        <div class="counter" data-target="{{a.cities}}">0</div>
+        <h2>Cities</h2>
+    </div>
+
+    <div class="box">
+        <i class="fas fa-th"></i>
+        <div class="counter" data-target="{{a.space}}">0</div><span>Km²</span>
+        <h2>Space</h2>
+    </div>
+</div>
+</section>
+
+{%endfor%}
+
+{%endblock%}

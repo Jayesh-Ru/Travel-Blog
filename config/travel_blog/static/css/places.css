@@ -1,0 +1,157 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto';
+    
+}
+html{
+    scroll-behavior: smooth;
+    background: #fff;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 6px;
+    border: 1px solid #fff;
+}
+::selection{
+    background: crimson;
+    color: #fff;
+}
+/* header section */
+header{
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.911);
+    display: flex;
+    -webkit-display:flex;
+    -moz-display:flex;
+    -ms-display:flex;
+    -o-display:flex;
+    align-items: center;
+    top: 0;
+    position: sticky;
+    z-index: 10;
+    border-bottom: 1px solid #fff;
+}
+.back-btn{
+    flex-basis: 2%;
+}
+.back-btn a i{
+    font-size: 40px;
+    padding-left: 20px;
+    color: rgb(255, 255, 255);
+}
+.title{
+    flex-basis: 98%;
+    text-align: center;
+}
+.title h1{
+    font-size: 40px;
+    font-family: 'Merienda';
+    color: #fff;
+}
+#all_maps{
+    margin: 2%;
+    background: none;
+    align-items: center;
+    clear:both;
+}
+.left{
+    float:left;
+    width: 45%;
+   
+}
+.left h1,.right h1,#a_e h1{
+    display: flex;
+    justify-content: center;
+    font-family: 'Merienda';
+    padding-top: 10px;
+    padding-bottom:4px ;
+    
+}
+.right{
+    float: right;
+    width: 45%;
+}
+
+#a_e{
+    clear:both;
+    margin: 2%;
+    background: none;
+    border: 5px ;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Footer Section */
+footer{
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    display: flex;
+    -webkit-display:flex;
+    -moz-display:flex;
+    -ms-display:flex;
+    -o-display:flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+footer h1{
+    font-weight: bold;
+    font-family: 'Merienda';
+    font-size: 30px;
+    color: #000;
+    margin: 0 20px;
+    flex-basis: 20%;
+}
+footer p{
+    text-align: center;
+    flex-basis: 70%;
+    font-size: 17px;
+}
+.sm{
+    position: absolute;
+    right: 40px;
+}
+.sm a{
+    font-size: 27px;
+    margin: 0 10px;
+    transition: .4s ease;
+}
+.sm i{
+    color: black;
+}
+.sm i:hover{
+    color: crimson;
+}
+@media(max-width:750px){
+    .sm{
+        right: 35%;
+        bottom: 0;
+    }
+    .sm a {
+        font-size: 20px;
+    }
+    footer h1{
+        margin: 0 5px;
+        font-size: 25px;
+    }
+    footer p{
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+

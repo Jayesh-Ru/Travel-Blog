@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+{% load static %}
+{% block content %}
+<!--Home section-->
+
+    <section id="home">
+        <h2 id="title">Discover <span>India</span></h2>
+        <p>Choosing <span>INDIA</span> means a good traveling choice for you. you will 
+        spend less money, and get the best traveling experience by visiting beauthiful places of the country.
+        </p>
+        <a href="{% url 'travel_blog:discover' %}" id="home-btn">Discover</a>
+    </section>
+
+{%endblock%}

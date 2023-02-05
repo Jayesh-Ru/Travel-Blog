@@ -1,0 +1,247 @@
+html{
+    scroll-behavior: smooth;
+}
+#about{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.445);
+    display: flex;
+    -webkit-display:flex;
+    -moz-display:flex;
+    -ms-display:flex;
+    -o-display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1; 
+    transition: .9s ease;
+    padding-bottom: 100px;
+}
+
+#about #aboutitle{
+    padding: 20px 0;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Merienda';
+    font-size: 40px; 
+    color:#000;
+}
+#line{
+    max-width: 270px;
+    width: 260px;
+    height: 7px;
+    background: crimson;
+    border-radius: 8px;
+}
+
+#about .column{
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    margin: 30px;
+    opacity: 1;
+}
+
+@keyframes slide{
+    from{
+        transform: translateX(-100px);
+        opacity: 0.2;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.text{
+    margin: 35px;
+}
+.text h2{
+    text-align: center;
+    padding: 30px;
+    font-family: 'Merienda';
+    box-shadow: 3px 4px 18px 8px rgb(19, 17, 17);
+    color: rgb(12, 11, 11);
+    
+}
+.text p{
+    padding: 40px;
+    background: rgb(216, 216, 216);
+    text-align: center;
+    font-weight: 200;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: .3s ease;
+}
+.text p:hover{
+    box-shadow: 3px 14px 18px 8px rgba(189, 0, 0, 0.445);
+}
+.column img{
+    max-width: 100%;
+    height: 300px;
+    margin-top: 80px;
+    margin-left: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* media queries for handeling the about page responsiveness*/
+@media(min-width:1300px){
+    #about img{
+        margin-left: 160px;
+    }
+}
+@media(min-width:1500px){
+    #about img{
+        margin-left: 250px;
+    }
+}
+@media(min-width:1700px){
+    #about .column{
+        margin: 80px;
+    }
+    #about img{
+        margin-left: auto;
+    }
+}
+@media(max-width:1130px){
+    .column img{
+        margin-left: auto;
+    }
+}
+@media(max-width:750px){
+    #about .column{
+        grid-template-columns: 1fr;
+    }
+    #about img{
+        margin: auto;
+    }
+}
+@media(max-width:505px){
+    #about #aboutitle{
+        font-size: 28px;
+    }
+    #line{
+        width: 180px;
+    }
+    .text{
+        margin: 10px;
+    }
+    .column{
+        margin: 10px;
+    }
+    .text h2{
+        font-size: 20px;
+    }
+    #about p{
+        padding: 20px;
+    }
+    #about img{
+        margin: auto;
+        height: 220px; 
+    }
+}
+
+
+/* Footer Section */
+footer{
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    display: flex;
+    -webkit-display:flex;
+    -moz-display:flex;
+    -ms-display:flex;
+    -o-display:flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+footer h1{
+    font-weight: bold;
+    font-family: 'Merienda';
+    font-size: 30px;
+    color: #000;
+    margin: 0 20px;
+    flex-basis: 20%;
+}
+footer p{
+    text-align: center;
+    flex-basis: 70%;
+    font-size: 17px;
+}
+.sm{
+    position: absolute;
+    right: 40px;
+}
+.sm a{
+    font-size: 27px;
+    margin: 0 10px;
+    transition: .4s ease;
+}
+.sm i{
+    color: black;
+}
+.sm i:hover{
+    color: crimson;
+}
+@media(max-width:750px){
+    .sm{
+        right: 35%;
+        bottom: 0;
+    }
+    .sm a {
+        font-size: 20px;
+    }
+    footer h1{
+        margin: 0 5px;
+        font-size: 25px;
+    }
+    footer p{
+        font-size: 11px;
+    }
+}
+/* Animated Counter section */
+#counters{
+    width: 100%;
+    color: #fff;
+    background: rgb(24, 24, 24);
+    display: flex;
+    -webkit-display:flex;
+    -moz-display:flex;
+    -o-display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+#counters .container{
+    width: 100%;
+    display: flex;
+    -webkit-display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    margin: 50px auto;
+}
+.box i{
+    font-size: 65px;
+    margin: 20px 0;
+    color: rgb(250, 28, 73);
+}
+.counter{
+    font-size: 40px;
+    font-weight: bold;
+}
+.box h2{
+    margin-top: 20px;
+}
+/* the counter responsiveness */
+@media(max-width:700px){
+    #counters .container{
+        flex-direction: column;
+    }
+}
+
+
+
+

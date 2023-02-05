@@ -1,0 +1,74 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="India is one of the best places to travel. it's a beautifull country that offers the best experience of traveling.">
+    <meta name="keywords" content="India,travel,Rajasthan,goa,sikkim,kerela">
+    <meta name="author" content="Jayesh Khairnar">
+    {% for c in country %}
+    <title>Discover {{ c.title }}</title>
+    {% endfor %}
+    <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/e391ce7786.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href=" {% static 'css/about.css' %}">
+
+    <link rel="stylesheet" href=" {% static 'css/places.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/discover.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/style.css' %}">  
+
+</head>
+
+<body style="background-image: url('{% static "images/main1.jpg" %}');"> 
+        <!--Header section.-->
+        <header class="header">
+          {% for c in country %}
+           <h1 id="logo">{{ c.title }}</h1>
+          {%endfor%}
+            <nav class="navbar">
+                <a href="{% url 'travel_blog:product_all' %}" class="nav-link" onclick="removeNav()">Home</a>
+                <a href="{% url 'travel_blog:about' %}" class="nav-link" onclick="removeNav()">About</a>
+                <div class="dropdown">
+                <a href="" id="drop"  class="nav-link" onclick="removeNav()" onmouseout="dropdown2()" onmouseover="dropdown1()">Places <i class="fas fa-chevron-down"></i></a>
+                   <div class="dropdown-content" onmouseout="dropdown2()" onmouseover="dropdown1()">
+                    
+                    {% for d in destinations %}
+                    <a style="border-bottom:1px solid #ccc" href="" class="drop-btn">{{ d.name }}</a>
+                    
+                    {% endfor %}
+                   </div>
+                </div>
+                <a href="{% url 'travel_blog:discover' %}" class="active" style="background-color: crimson;" onclick="removeNav()">Discover</a>
+            </nav>
+            <div class="toggle">
+                <button><i class="fas fa-bars"></i></button>
+            </div>
+        </header>
+
+       
+        <div id="content"> {% block content %} {% endblock %}</div>
+<!--Footer Section-->
+        <footer>
+            <a href="#"><h1 style=" background: -webkit-linear-gradient(180deg, rgba(10,137,1,1) 10%,rgba(255,255,255,1) 28%, rgb(255, 143, 24)  47%);
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              font-weight: bold; "
+              >{% for c in country %}{{c.title}}{% endfor %} </h1></a>
+            <p> Made with ❤️ by<a style="color: crimson; font-weight: 700;" href="https://github.com/Jayesh-Ru" target="_blank"> Jayesh Khairnar</a>.</p>
+            <div class="sm">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </footer>
+
+        <a href="#" id="cursor"><i class="fas fa-arrow-circle-up"></i></a>
+        <script src="{% static 'JS/app.js'%}" defer></script>
+        <script src="{% static 'JS/about.js'%}" defer></script>
+        <script src="{% static 'JS/discover.js'%}" defer></script>
+</body>
+</html>
+
